@@ -1,6 +1,8 @@
 class Dog():
-  def __init__(self, mybreed, name, spots):
 
+  species = 'mammal'
+  def __init__(self, mybreed, name, spots):
+    
     self.mybreed = mybreed
     self.name = name
     # Expect a boolean
@@ -12,4 +14,4 @@ my_dog = Dog('lab', 'sammy', False)
 print(type(my_dog))
 print('dog name is', my_dog.name)
 
-print('dog has spots? ', my_dog.spots)
+print('dog has species defined? ', my_dog.species)
