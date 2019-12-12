@@ -29,3 +29,23 @@ def pet_speak(pet):
 
 pet_speak(niko)
 pet_speak(felix)
+
+class Animals ():
+  def __init__(self, name):
+    self.name = name
+  def speak(self):
+    raise NotImplementedError("Subclass not implemented this abstract method")
+
+class Dogs(Animals):
+  def speak(self):
+    return self.name+ " says woofs!"
+
+class Cats(Animals):
+  def speak(self):
+    return self.name+ " says meows!"
+
+fido = Dogs("Fido")
+simba = Cats("simba")
+
+print(fido.speak())
+print(simba.speak())
