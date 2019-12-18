@@ -1,10 +1,14 @@
-try:
-  f = open('testfile', 'r')
-  f.write("Write a test line")
-except TypeError:
-  print("There was a type error!")
-except OSError:
-  print("Hey you have an OSError!")
+def ask_for_int():
+  while True:
+    try:
+      result = int(input("\nPlease provide a number: "))
+    except:
+      print("\nWhoops! That is not a number")
+      continue
+    else:
+      print(f"Yes, the result is {result}")
+      break
+    finally:
+      print("I am going to ask again")
 
-finally:
-  print("I always run!")
+ask_for_int()
