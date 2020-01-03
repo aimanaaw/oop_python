@@ -9,9 +9,15 @@ def hello(name='Jose'):
 
   def welcome():
     return '\t This is welcome() inside hello()'
-  print(greet())
-  print(welcome())
-  print('This is the end of the hello function')
 
-hello()
+  print("I am going to return a function")
+
+  if name == 'Jose':
+    return greet
+  else:
+    return welcome
+
+my_new_func = hello('Jose')
+
+print(my_new_func())
 
