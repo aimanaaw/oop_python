@@ -21,3 +21,13 @@ my_new_func = hello('Jose')
 
 print(my_new_func())
 
+
+def cool():
+  def super_cool():
+    return 'I am very cool!'
+  return super_cool
+
+some_func = cool()
+some_func()
+
+
